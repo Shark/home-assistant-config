@@ -1,0 +1,9 @@
+- platform: mqtt
+  state_topic: "things/fan/getTemperature/res"
+  name: "Fan"
+  unit_of_measurement: "°C"
+  value_template: "{{ value_json.getTemperature | round(2) }}"
+- platform: mqtt
+  state_topic: "things/fan/getLevel/res"
+  name: "Fan Level"
+  value_template: "{{ value_json.getLevel | round(2) }}"

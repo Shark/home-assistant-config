@@ -1,0 +1,9 @@
+name: Fan
+entities:
+  - switch.fan_light
+  - script.fan_level0
+  - script.fan_level1
+  - script.fan_level2
+  - script.fan_level3
+  - sensor.fan
+  - sensor.fan_level

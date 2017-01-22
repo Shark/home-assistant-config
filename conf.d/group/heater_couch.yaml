@@ -1,0 +1,9 @@
+name: Heater Couch
+entities:
+  - sensor.heater_couch_actual
+  - sensor.heater_couch_mode
+  - input_select.heater_couch_mode_choose
+  - sensor.heater_couch_set
+  - input_select.heater_couch_temp_choose
+  - sensor.heater_couch_valve
+  - sensor.heater_couch_battery

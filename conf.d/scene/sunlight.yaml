@@ -1,0 +1,14 @@
+- name: Sunlight
+  entities:
+    light.ceiling_east:
+      state: on
+      brightness: 255
+      rgb_color: [255, 126, 0]
+    light.ceiling_west:
+      state: on
+      brightness: 255
+      rgb_color: [255, 126, 0]
+    light.bed:
+      state: on
+      brightness: 255
+      rgb_color: [255, 126, 0]

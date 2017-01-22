@@ -1,0 +1,6 @@
+sequence:
+  - delay:
+      seconds: 3
+  - service: homeassistant.toggle
+    entity_id:
+      - light.desk

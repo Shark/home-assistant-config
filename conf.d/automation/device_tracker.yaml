@@ -1,0 +1,31 @@
+- trigger:
+    platform: zone
+    entity_id: device_tracker.felix_iphone7
+    zone: zone.home
+    event: enter
+  condition:
+    condition: state
+    entity_id: input_boolean.heaters_override
+    state: 'off'
+  action:
+    - service: notify.pushover
+      data:
+        message: Welcome at home!
+    - service: homeassistant.turn_on
+      entity_id: script.heaters_coming_home
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.fan_mode_auto
+- trigger:
+    platform: zone
+    entity_id: device_tracker.felix_iphone7
+    zone: zone.home
+    event: leave
+  condition:
+    condition: state
+    entity_id: input_boolean.heaters_override
+    state: 'off'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: script.heaters_leaving_home
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.fan_mode_auto

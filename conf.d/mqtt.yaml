@@ -1,0 +1,6 @@
+broker: rabbitmq
+port: 1883
+client_id: home-assistant-1
+keepalive: 60
+username: !env_var HASS_MQTT_USERNAME
+password: !env_var HASS_MQTT_PASSWORD

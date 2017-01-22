@@ -1,0 +1,7 @@
+- trigger:
+    platform: state
+    entity_id: sensor.nas_services
+  action:
+    - service: notify.pushover
+      data_template:
+        message: "NAS Services is now {{ trigger.to_state.state }}"

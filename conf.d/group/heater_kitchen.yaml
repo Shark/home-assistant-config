@@ -1,0 +1,9 @@
+name: Heater Kitchen
+entities:
+  - sensor.heater_kitchen_actual
+  - sensor.heater_kitchen_mode
+  - input_select.heater_kitchen_mode_choose
+  - sensor.heater_kitchen_set
+  - input_select.heater_kitchen_temp_choose
+  - sensor.heater_kitchen_valve
+  - sensor.heater_kitchen_battery

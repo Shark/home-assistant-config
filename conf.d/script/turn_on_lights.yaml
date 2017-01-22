@@ -1,0 +1,8 @@
+sequence:
+  - service: homeassistant.turn_on
+    entity_id:
+      - switch.ceiling_east
+      - switch.ceiling_west
+      - switch.bed
+  - service: scene.turn_on
+    entity_id: scene.room_lighting

@@ -1,0 +1,5 @@
+- platform: mqtt
+  name: "NAS Services"
+  command_topic: "things/nasServices/setPower/req"
+  payload_on: "{\"setPower\": true}"
+  payload_off: "{\"setPower\": false}"

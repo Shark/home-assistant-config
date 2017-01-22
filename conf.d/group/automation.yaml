@@ -1,0 +1,9 @@
+name: Automation
+view: yes
+icon: 'mdi:settings-box'
+entities:
+  - input_boolean.in_bed
+  - group.scripts
+  - input_boolean.fan_mode_auto
+  - input_boolean.fan_mode_auto_on
+  - input_boolean.fan_override

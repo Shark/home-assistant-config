@@ -1,0 +1,96 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: !env_var HASS_NAME
+  # Location required to calculate the time the sun rises and sets
+  latitude: !env_var HASS_LATITUDE
+  longitude: !env_var HASS_LONGITUDE
+  # Impacts weather/sunrise data
+  elevation: !env_var HASS_ELEVATION
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Berlin
+  customize: !include conf.d/customize.yaml
+
+logger:
+  default: "warn"
+
+# Enables the frontend
+frontend:
+
+http:
+  api_password: !env_var HASS_HTTP_API_PASSWORD
+
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+# discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+recorder:
+  db_url: !env_var HASS_DB_URL
+  purge_days: 60
+
+#influxdb:
+#  host: influxdb
+#  username: home_assistant
+#  password: home_assistant
+#  database: home_assistant
+#  whitelist:
+#    - sensor.nightstand
+#    - sensor.kodroid
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+alexa:
+  intents: !include conf.d/alexa/intents.yaml
+mqtt: !include conf.d/mqtt.yaml
+switch: !include_dir_merge_list conf.d/switch/
+sensor: !include_dir_merge_list conf.d/sensor/
+binary_sensor: !include_dir_merge_list conf.d/binary_sensor/
+group: !include_dir_named conf.d/group/
+zone: !include_dir_list conf.d/zone/
+automation: !include_dir_merge_list conf.d/automation/
+panel_iframe: !include_dir_named conf.d/panel_iframe/
+light: !include_dir_merge_list conf.d/light/
+scene: !include_dir_merge_list conf.d/scene/
+input_boolean: !include conf.d/input_boolean.yaml
+script: !include_dir_named conf.d/script/
+input_select: !include conf.d/input_select.yaml
+
+device_tracker:
+  platform: owntracks
+  max_gps_accuracy: 200
+
+notify:
+  name: pushover
+  platform: pushover
+  api_key: !env_var HASS_PUSHOVER_API_KEY
+  user_key: !env_var HASS_PUSHOVER_USER_KEY
+
+apcupsd:
+  host: !env_var HASS_APCUPSD_HOST
+
+ifttt:
+  key: !env_var HASS_IFTTT_KEY
+
+#homematic:
+#  remote_ip: 172.16.0.59
+#  username: guest
+#  password: guest
+
+emulated_hue:
+  host_ip: !env_var HASS_HUE_HOST_IP
+  listen_port: 8300
+  expose_by_default: false

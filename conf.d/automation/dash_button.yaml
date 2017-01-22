@@ -1,0 +1,68 @@
+- trigger:
+    platform: state
+    entity_id: binary_sensor.dash_button_coming_home
+    state: 'on'
+  action:
+    - service: homeassistant.turn_on
+      entity_id:
+        - script.turn_on_lights
+        - script.heaters_coming_home
+- trigger:
+    platform: state
+    entity_id: binary_sensor.dash_button_leaving_home
+    state: 'on'
+  action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.all_lights
+        - group.living_room
+        - group.kodroid
+    - service: homeassistant.turn_on
+      entity_id: script.heaters_leaving_home
+- trigger:
+    platform: state
+    entity_id: binary_sensor.dash_button_schreibtisch
+    state: 'on'
+  action:
+    - service: homeassistant.toggle
+      entity_id:
+        - switch.desk
+    - service: homeassistant.turn_on
+      entity_id:
+        - script.turn_on_desk
+- trigger:
+    platform: state
+    entity_id: binary_sensor.dash_button_gn8
+    state: 'on'
+  condition:
+    condition: time
+    after: '19:00:00'
+    before: '04:00:00'
+  action:
+     - service: scene.turn_on
+       entity_id: scene.at_night
+     - service: homeassistant.turn_on
+       entity_id: input_boolean.in_bed
+     - service: ifttt.trigger
+       data:
+         event: gn8
+         value1: go_to_sleep
+     - service: homeassistant.turn_on
+       entity_id: input_boolean.fan_mode_auto
+- trigger:
+    platform: state
+    entity_id: binary_sensor.dash_button_gn8
+    state: 'on'
+  condition:
+    condition: time
+    after: '03:59:59'
+    before: '19:00:01'
+  action:
+    - service: scene.turn_on
+      entity_id: scene.sunlight
+    - service: ifttt.trigger
+      data:
+        event: gn8
+        value1: wake_up
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.fan_mode_auto

@@ -1,0 +1,3 @@
+title: 'Zabbix Triggers'
+icon: 'mdi:alert-circle-outline'
+url: !env_var HASS_ZABBIX_URL

@@ -1,0 +1,9 @@
+name: Heater Bed
+entities:
+  - sensor.heater_bed_actual
+  - sensor.heater_bed_mode
+  - input_select.heater_bed_mode_choose
+  - sensor.heater_bed_set
+  - input_select.heater_bed_temp_choose
+  - sensor.heater_bed_valve
+  - sensor.heater_bed_battery

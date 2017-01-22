@@ -1,0 +1,17 @@
+name: Living Room
+entities:
+  - switch.desk
+  - sensor.desk_power
+  - light.desk
+  - sensor.desk
+  - sensor.desk_2
+  - sensor.desk_3
+  - switch.nightstand
+  - sensor.nightstand
+  - switch.bed
+  - light.bed
+  - switch.ceiling_west
+  - light.ceiling_west
+  - switch.ceiling_east
+  - light.ceiling_east
+  - switch.kodi

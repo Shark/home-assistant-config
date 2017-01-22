@@ -1,0 +1,24 @@
+- platform: mqtt
+  name: 'Dash Button "Coming Home"'
+  state_topic: 'things/dashComingHome/getPress/res'
+  payload_on: 'ON'
+  payload_off: 'OFF'
+  value_template: '{% if value_json.getPress %}ON{% else %}OFF{% endif %}'
+- platform: mqtt
+  name: 'Dash Button "Leaving Home"'
+  state_topic: 'things/dashLeavingHome/getPress/res'
+  payload_on: 'ON'
+  payload_off: 'OFF'
+  value_template: '{% if value_json.getPress %}ON{% else %}OFF{% endif %}'
+- platform: mqtt
+  name: 'Dash Button "Schreibtisch"'
+  state_topic: 'things/dashDesk/getPress/res'
+  payload_on: 'ON'
+  payload_off: 'OFF'
+  value_template: '{% if value_json.getPress %}ON{% else %}OFF{% endif %}'
+- platform: mqtt
+  name: 'Dash Button "gn8"'
+  state_topic: 'things/dashGn8/getPress/res'
+  payload_on: 'ON'
+  payload_off: 'OFF'
+  value_template: '{% if value_json.getPress %}ON{% else %}OFF{% endif %}'

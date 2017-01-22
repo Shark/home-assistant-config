@@ -1,0 +1,4 @@
+- platform: mqtt
+  state_topic: "things/bathroomWindow/getAlive/res"
+  name: "Bathroom Window Aliveness"
+  value_template: "{{ now() }}"

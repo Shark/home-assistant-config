@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: "Fan Light"
+  command_topic: "things/fan/setLight/req"
+  payload_on: "{\"setLight\":true}"
+  payload_off: "{\"setLight\":false}"
+  state_topic: "things/fan/setLight/res"
+  value_template: "{% if value_json.setLight %}{\"setLight\":true}{% else %}{\"setLight\":false}{% endif %}"

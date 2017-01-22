@@ -1,0 +1,18 @@
+sequence:
+  - condition: state
+    entity_id: input_boolean.heaters_override
+    state: 'off'
+  - service: mqtt.publish
+    data_template:
+      topic: "things/heater_bed/setMode/req"
+      payload_template: "{\"setMode\": \"auto\"}"
+  - service: mqtt.publish
+    data_template:
+      topic: "things/heater_couch/setMode/req"
+      payload_template: "{\"setMode\": \"auto\"}"
+  - service: mqtt.publish
+    data_template:
+      topic: "things/heater_kitchen/setMode/req"
+      payload_template: "{\"setMode\": \"auto\"}"
+  - service: homeassistant.turn_on
+    entity_id: input_boolean.fan_mode_auto

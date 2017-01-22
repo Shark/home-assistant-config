@@ -1,0 +1,6 @@
+name: Servers
+view: yes
+icon: 'mdi:server-network'
+entities:
+  - group.nas
+  - group.kodroid

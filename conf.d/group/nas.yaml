@@ -1,0 +1,2 @@
+name: NAS
+entities: sensor.ups_status, binary_sensor.ups_online, sensor.ups_battery, sensor.ups_input_voltage, sensor.ups_load, sensor.ups_wattage, sensor.ups_time_left, sensor.ups_transfer_count, sensor.cpu_use, switch.nas_services, sensor.nas_services

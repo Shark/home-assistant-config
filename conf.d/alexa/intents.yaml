@@ -1,0 +1,37 @@
+ActivateSceneIntent:
+  action:
+    service: scene.turn_on
+    data_template:
+      entity_id: scene.{{ Scene | replace(" ", "_") }}
+  speech:
+    type: plaintext
+    text: !include replies/confirm.yaml
+ComingHomeIntent:
+  action:
+    - service: homeassistant.turn_on
+      entity_id:
+      - script.turn_on_lights
+      - script.heaters_coming_home
+  speech:
+    type: plaintext
+    text: !include replies/welcome.yaml
+LeavingHomeIntent:
+  action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.all_lights
+        - group.living_room
+        - group.kodroid
+    - service: homeassistant.turn_on
+      entity_id: script.heaters_leaving_home
+  speech:
+    type: plaintext
+    text: !include replies/goodbye.yaml
+TemperatureInfoIntent:
+  speech:
+    type: plaintext
+    text: >
+      Die Temperatur an den Fenstern ist {{ states("sensor.heater_bed_actual") | round(1) | replace(".", ",") }} Grad und {{ states("sensor.heater_couch_actual") | round(1) | replace(".", ",") }} Grad
+      an den Heizungen. Am Schreibtisch sind es {{ states("sensor.desk") | round(1) | replace(".", ",") }} Grad bei {{ states("sensor.desk_2") | round }}% Luftfeuchtigkeit.
+      In der Küche messe ich {{ states("sensor.heater_kitchen_actual") | round(1) | replace(".", ",") }} Grad. Im Bad sind {{ states("sensor.bathroom") | round(1) | replace(".", ",") }} Grad bei
+      {{ states("sensor.bathroom_2") | round }}% Luftfeuchtigkeit.

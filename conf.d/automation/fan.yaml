@@ -1,0 +1,38 @@
+- trigger:
+    platform: time
+    minutes: '/20'
+    seconds: 0
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.fan_mode_auto
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.fan_override
+        state: 'off'
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: 'things/fan/setLevel/req'
+        payload_template: '{"setLevel":1}'
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.fan_mode_auto_on
+- trigger:
+    platform: state
+    entity_id: input_boolean.fan_mode_auto_on
+    state: 'on'
+    for:
+      minutes: 5
+      seconds: 0
+  condition:
+    condition: state
+    entity_id: input_boolean.fan_override
+    state: 'off'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.fan_mode_auto_on
+    - service: mqtt.publish
+      data_template:
+        topic: 'things/fan/setLevel/req'
+        payload_template: '{"setLevel":0}'    

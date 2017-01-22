@@ -1,0 +1,9 @@
+name: Scenes
+entities:
+  - scene.at_night
+  - scene.evening
+  - scene.in_the_morning
+  - scene.sunlight
+  - scene.ambient_lighting
+  - scene.room_lighting
+  - scene.lights_out

@@ -1,0 +1,9 @@
+- platform: mqtt
+  state_topic: "things/kodroid/getTemperature/res"
+  name: "K-ODROID"
+  unit_of_measurement: "°C"
+  value_template: "{{ value_json.getTemperature | round(2) }}"
+- platform: mqtt
+  state_topic: "things/nasServices/setPower/res"
+  name: "NAS Services"
+  value_template: "{% if value_json.setPower %}ON{% else %}OFF{% endif %}"

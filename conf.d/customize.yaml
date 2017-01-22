@@ -1,0 +1,48 @@
+sensor.bathroom_2:
+  icon: "mdi:water"
+sensor.desk_2:
+  icon: "mdi:water"
+sensor.desk_3:
+  icon: "mdi:eye"
+sensor.ups_wattage:
+  icon: "mdi:gauge"
+sensor.nas_services:
+  icon: "mdi:settings"
+
+light.bed:
+  emulated_hue: true
+  emulated_hue_name: Bett
+light.ceiling_east:
+  emulated_hue: true
+  emulated_hue_name: Decke Ost
+light.ceiling_west:
+  emulated_hue: true
+  emulated_hue_name: Decke West
+light.desk:
+  emulated_hue: true
+  emulated_hue_name: Schreibtisch
+switch.bed:
+  emulated_hue: true
+  emulated_hue_name: Strom Bett
+switch.ceiling_east:
+  emulated_hue: true
+  emulated_hue_name: Strom Decke Ost
+switch.ceiling_west:
+  emulated_hue: true
+  emulated_hue_name: Strom Decke West
+switch.desk:
+  emulated_hue: true
+  emulated_hue_name: Strom Schreibtisch
+switch.kodi:
+  emulated_hue: true
+  emulated_hue_name: Kodi
+switch.nas_services:
+  icon: "mdi:settings"
+  emulated_hue: true
+  emulated_hue_name: Server-Dienste
+switch.nightstand:
+  emulated_hue: true
+  emulated_hue_name: Nachttisch
+input_boolean.heaters_override:
+  emulated_hue: true
+  emulated_hue_name: Heizungssperre

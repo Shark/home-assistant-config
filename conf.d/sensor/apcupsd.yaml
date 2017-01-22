@@ -1,0 +1,15 @@
+- platform: apcupsd
+  resources:
+    - bcharge
+    - linev
+    - loadpct
+    - numxfers
+    - status
+    - timeleft
+- platform: template
+  sensors:
+    ups_wattage:
+      value_template: '{{ (((states.sensor.ups_load.state | float) / 100) * 500) | round }}'
+      friendly_name: 'UPS Wattage'
+      unit_of_measurement: 'W'
+      entity_id: 'sensor.ups_load'

@@ -1,0 +1,10 @@
+- trigger:
+    platform: sun
+    event: sunrise
+  condition:
+    condition: zone
+    entity_id: device_tracker.felix_iphone7
+    zone: zone.home
+  action:
+    - service: scene.turn_on
+      entity_id: scene.in_the_morning

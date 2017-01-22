@@ -1,0 +1,25 @@
+- platform: mqtt
+  state_topic: "things/heater_couch/getTemperature/res"
+  name: "Heater Couch (actual)"
+  unit_of_measurement: "°C"
+  value_template: "{{ value_json.getTemperature | round(2) }}"
+- platform: mqtt
+  state_topic: "things/heater_couch/getMode/res"
+  name: "Heater Couch (mode)"
+  unit_of_measurement: ""
+  value_template: "{{ value_json.getMode }}"
+- platform: mqtt
+  state_topic: "things/heater_couch/getState/res"
+  name: "Heater Couch (set)"
+  unit_of_measurement: "°C"
+  value_template: "{% if 'SET_TEMPERATURE' in value_json.getState %}{{ value_json.getState.SET_TEMPERATURE | round(2) }}{% else %}{{ states('sensor.heater_couch_set') }}{% endif %}"
+- platform: mqtt
+  state_topic: "things/heater_couch/getState/res"
+  name: "Heater Couch (valve)"
+  unit_of_measurement: "%"
+  value_template: "{% if 'VALVE_STATE' in value_json.getState %}{{ value_json.getState.VALVE_STATE | round(0) }}{% else %}{{ states('sensor.heater_couch_valve') }}{% endif %}"
+- platform: mqtt
+  state_topic: "things/heater_couch/getState/res"
+  name: "Heater Couch (battery)"
+  unit_of_measurement: "V"
+  value_template: "{% if 'BATTERY_STATE' in value_json.getState %}{{ value_json.getState.BATTERY_STATE | round(1) }}{% else %}{{ states('sensor.heater_couch_battery') }}{% endif %}"

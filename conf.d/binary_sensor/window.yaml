@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: 'Bathroom Window'
+  state_topic: 'things/bathroomWindow/getOpen/res'
+  payload_on: 'open'
+  payload_off: 'closed'
+  sensor_class: opening
+  value_template: '{% if value_json.getOpen %}open{% else %}closed{% endif %}'

@@ -1,0 +1,4 @@
+name: K-ODROID
+entities:
+  - sensor.kodroid
+  - switch.kodi

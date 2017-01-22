@@ -1,0 +1,6 @@
+- platform: mqtt_json
+  name: Ceiling West
+  state_topic: 'things/ceilingWest/setRGB/res'
+  command_topic: 'things/ceilingWest/setRGB/req'
+  brightness: true
+  rgb: true

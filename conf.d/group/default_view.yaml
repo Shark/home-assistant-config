@@ -1,0 +1,8 @@
+view: yes
+entities:
+  - group.heaters_default
+  - group.living_room
+  - group.bathroom
+  - group.presence
+  - group.scenes
+  - group.fan

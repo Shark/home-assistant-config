@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: "Nightstand"
+  command_topic: "things/nightstand/setPower/req"
+  payload_on: "{\"setPower\": true}"
+  payload_off: "{\"setPower\": false}"
+  state_topic: "things/nightstand/setPower/res"
+  value_template: "{% if value_json.setPower %}{\"setPower\": true}{% else %}{\"setPower\": false}{% endif %}"

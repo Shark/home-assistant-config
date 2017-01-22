@@ -1,0 +1,6 @@
+- platform: mqtt_json
+  name: Desk
+  state_topic: 'things/desk/setRGB/res'
+  command_topic: 'things/desk/setRGB/req'
+  brightness: true
+  rgb: true

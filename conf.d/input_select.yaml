@@ -1,0 +1,46 @@
+heater_couch_temp_choose:
+  name: Heater Couch (choose temp)
+  options:
+    - 12.0
+    - 17.0
+    - 20.0
+    - 21.5
+heater_couch_mode_choose:
+  name: Heater Couch (choose mode)
+  options:
+    - auto
+    - manual
+    - boost
+heater_bed_temp_choose:
+  name: Heater Bed (choose temp)
+  options:
+    - 12.0
+    - 17.0
+    - 20.0
+    - 21.5
+heater_bed_mode_choose:
+  name: Heater Bed (choose mode)
+  options:
+    - auto
+    - manual
+    - boost
+heater_kitchen_temp_choose:
+  name: Heater Kitchen (choose temp)
+  options:
+    - 12.0
+    - 17.0
+    - 20.0
+    - 21.5
+heater_kitchen_mode_choose:
+  name: Heater Kitchen (choose mode)
+  options:
+    - auto
+    - manual
+    - boost
+heaters_temp_choose:
+  name: Heaters (choose temp)
+  options:
+    - 12.0
+    - 17.0
+    - 20.0
+    - 21.5

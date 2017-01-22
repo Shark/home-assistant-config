@@ -1,0 +1,20 @@
+>
+  {{ [
+       "Bon giorno, John Porno",
+       "Buongiorno Adorno",
+       "Guten Tacho",
+       "Hallöchen und söchen",
+       "Hallöchen Popöchen",
+       "Hallöchen mit Öchen",
+       "Heroin-spaziert",
+       "Hier Hollywood, wer dort?",
+       "Na, Urlauber!",
+       "Was kann ich gegen Sie tun?",
+       "Wie geht's Deiner Frau und meinen Kindern?",
+       "Halli hallöchen",
+       "Tachchen!",
+       "Moin Moin",
+       "Habe die Ehre",
+       "Servus",
+       "Wir begrüßen die zugestiegenen Fahrgäste im Zug der Deutschen Bahn nach Meppen."
+     ] | random }} 

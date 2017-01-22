@@ -1,0 +1,16 @@
+in_bed:
+  name: Sleep Timer in Bed
+  initial: off
+  icon: mdi:sleep
+heaters_override:
+  name: Heaters Override
+  initial: off
+  icon: mdi:alert-circle-outline
+fan_mode_auto:
+  name: Fan Mode Auto
+  initial: off
+fan_mode_auto_on:
+  name: Fan Mode Auto is on
+fan_override:
+  name: Fan Override
+  initial: off
