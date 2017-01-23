@@ -1,0 +1,8 @@
+name: Weather
+entities:
+  - sensor.yr_cloudiness
+  - sensor.yr_dewpoint_temperature
+  - sensor.yr_humidity
+  - sensor.yr_symbol
+  - sensor.yr_temperature
+  - sun.sun
