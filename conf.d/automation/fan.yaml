@@ -102,3 +102,44 @@
         topic: 'things/fan/setLevel/req'
         payload_template: >
           {"setLevel":{% if states.input_boolean.fan_mode_diff.state == 'on' %}1{% else %}0{% endif %}}'
+
+# Fan Override
+- trigger:
+    platform: state
+    entity_id: input_boolean.fan_override
+    state: 'on'
+  action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - input_boolean.fan_mode_diff
+        - input_boolean.fan_mode_auto
+    - service: mqtt.publish
+      data_template:
+        topic: 'things/fan/setLevel/req'
+        payload_template: '{"setLevel":0}'
+
+- trigger:
+    platform: state
+    entity_id: input_boolean.fan_override
+    state: 'off'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.fan_mode_auto
+
+- trigger:
+    platform: time
+    hours: 23
+    minutes: 0
+    seconds: 0
+  action:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.fan_override
+
+- trigger:
+    platform: time
+    hours: 7
+    minutes: 0
+    seconds: 0
+  action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.fan_override
