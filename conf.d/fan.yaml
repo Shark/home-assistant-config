@@ -1,0 +1,24 @@
+- platform: mqtt
+  name: Fan
+
+  command_topic: 'things/fan/setLight/req'
+  state_topic: 'things/fan/setLight/res'
+  payload_on: '{"setLight":true}'
+  payload_off: '{"setLight":false}'
+  state_value_template: >
+    {% if value_json.setLight %}{"setLight":true}{% else %}{"setLight":false}{% endif %}
+
+  oscillation_command_topic: 'things/fan/setLevel/req'
+  oscillation_state_topic: 'things/fan/setLevel/res'
+  payload_oscillation_on: '{"setLevel":1}'
+  payload_oscillation_off: '{"setLevel":0}'
+  oscillation_value_template: >
+    {% if (float(value_json.setLevel) | round) > 0 %}{"setLevel":1}{% else %}{"setLevel":0}{% endif %}
+
+  speed_command_topic: 'things/fan/setLevel/req'
+  speed_state_topic: 'things/fan/setLevel/res'
+  payload_low_speed: '{"setLevel":1}'
+  payload_medium_speed: '{"setLevel":2}'
+  payload_high_speed: '{"setLevel":3}'
+  speed_value_template: >
+    {% if (float(value_json.setLevel) | round) == 0 %}{"setLevel":0}{% elif (float(value_json.setLevel) | round) == 1 %}{"setLevel":1}{% elif (float(value_json.setLevel) | round) == 2 %}{"setLevel":2}{% elif (float(value_json.setLevel) | round) == 3 %}{"setLevel":3}{% endif %}

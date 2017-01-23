@@ -7,3 +7,4 @@ entities:
   - script.fan_level3
   - sensor.fan
   - sensor.fan_level
+  - fan.fan
