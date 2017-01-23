@@ -3,4 +3,4 @@ view: yes
 icon: 'mdi:weather-sunny'
 entities:
   - group.weather
-  - group.cam
+  #- group.cam
