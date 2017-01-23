@@ -14,4 +14,5 @@ entities:
   - sensor.heater_couch_actual
   - sensor.heater_kitchen_actual
   - sensor.heaters_diff
+  - sensor.heaters_valve_max
   - input_boolean.heaters_override

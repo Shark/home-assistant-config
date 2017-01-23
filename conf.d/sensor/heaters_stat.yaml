@@ -12,3 +12,11 @@
         - sensor.heater_couch_set
         - sensor.heater_bed_set
         - sensor.heater_kitchen_set
+- platform: min_max
+  type: max
+  name: Heaters Valve
+  round_digits: 0
+  entity_ids:
+    - sensor.heater_couch_valve
+    - sensor.heater_bed_valve
+    - sensor.heater_kitchen_valve
