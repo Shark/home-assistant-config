@@ -1,0 +1,14 @@
+- platform: template
+  sensors:
+    heaters_diff:
+      value_template: >
+        {{ (((float(states.sensor.heater_couch_actual.state) + float(states.sensor.heater_bed_actual.state) + float(states.sensor.heater_kitchen_actual.state)) / 3) - ((float(states.sensor.heater_couch_set.state) + float(states.sensor.heater_bed_set.state)) + float(states.sensor.heater_kitchen_set.state)) / 3) | round(1) }}
+      friendly_name: 'Heaters Temp Diff (actual-set)'
+      unit_of_measurement: '°C'
+      entity_id:
+        - sensor.heater_couch_actual
+        - sensor.heater_bed_actual
+        - sensor.heater_kitchen_actual
+        - sensor.heater_couch_set
+        - sensor.heater_bed_set
+        - sensor.heater_kitchen_set

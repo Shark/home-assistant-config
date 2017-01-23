@@ -53,8 +53,7 @@
     conditions:
       - condition: template
         value_template: >
-          {% set diff = (((float(states.sensor.heater_couch_actual.state) + float(states.sensor.heater_bed_actual.state) + float(states.sensor.heater_kitchen_actual.state)) / 3) - ((float(states.sensor.heater_couch_set.state) + float(states.sensor.heater_bed_set.state) + float(states.sensor.heater_kitchen_set.state)) / 3)) %}
-          {{ (diff | abs) >= 2 }}
+          {{ (float(states.sensor.heaters_diff.state) | abs) >= 2 }}
       - condition: state
         entity_id: input_boolean.fan_override
         state: 'off'
@@ -80,8 +79,7 @@
     conditions:
       - condition: template
         value_template: >
-          {% set diff = (((float(states.sensor.heater_couch_actual.state) + float(states.sensor.heater_bed_actual.state) + float(states.sensor.heater_kitchen_actual.state)) / 3) - ((float(states.sensor.heater_couch_set.state) + float(states.sensor.heater_bed_set.state) + float(states.sensor.heater_kitchen_set.state)) / 3)) %}
-          {{ (diff | abs) < 2 }}
+          {{ (float(states.sensor.heaters_diff.state) | abs) < 2 }}
       - condition: state
         entity_id: input_boolean.fan_override
         state: 'off'
