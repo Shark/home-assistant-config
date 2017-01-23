@@ -11,6 +11,8 @@ fan_mode_auto:
   initial: off
 fan_mode_auto_on:
   name: Fan Mode Auto is on
+fan_mode_diff:
+  name: Fan Mode Temperature Difference
 fan_override:
   name: Fan Override
   initial: off

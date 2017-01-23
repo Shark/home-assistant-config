@@ -14,5 +14,9 @@ sequence:
     data_template:
       topic: "things/heater_kitchen/setMode/req"
       payload_template: "{\"setMode\": \"auto\"}"
+
+  # Fan
   - service: homeassistant.turn_on
     entity_id: input_boolean.fan_mode_auto
+  - service: homeassistant.turn_off
+    entity_id: input_boolean.fan_override

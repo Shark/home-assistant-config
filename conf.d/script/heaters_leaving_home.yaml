@@ -28,5 +28,13 @@ sequence:
     data_template:
       topic: "things/heater_kitchen/setTemperature/req"
       payload_template: "{\"setTemperature\": 17.0}"
+
+  # Fan
   - service: homeassistant.turn_off
     entity_id: input_boolean.fan_mode_auto
+  - service: homeassistant.turn_on
+    entity_id: input_boolean.fan_override
+  - service: mqtt.publish
+    data_template:
+      topic: 'things/fan/setLevel/req'
+      payload_template: '{"setLevel":0}'

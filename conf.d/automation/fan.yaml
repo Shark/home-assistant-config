@@ -1,3 +1,4 @@
+# Fan Mode Auto
 - trigger:
     platform: time
     minutes: '/20'
@@ -35,4 +36,71 @@
     - service: mqtt.publish
       data_template:
         topic: 'things/fan/setLevel/req'
-        payload_template: '{"setLevel":0}'    
+        payload_template: '{"setLevel":0}'
+
+# Fan Mode Diff
+- trigger:
+    platform: state
+    entity_id:
+      - sensor.heater_couch_actual
+      - sensor.heater_bed_actual
+      - sensor.heater_kitchen_actual
+      - sensor.heater_couch_set
+      - sensor.heater_bed_set
+      - sensor.heater_kitchen_set
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: >
+          {% set diff = (((float(states.sensor.heater_couch_actual.state) + float(states.sensor.heater_bed_actual.state) + float(states.sensor.heater_kitchen_actual.state)) / 3) - ((float(states.sensor.heater_couch_set.state) + float(states.sensor.heater_bed_set.state) + float(states.sensor.heater_kitchen_set.state)) / 3)) %}
+          {{ (diff | abs) >= 2 }}
+      - condition: state
+        entity_id: input_boolean.fan_override
+        state: 'off'
+  action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - input_boolean.fan_mode_auto
+        - input_boolean.fan_mode_auto_on
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.fan_mode_diff
+
+- trigger:
+    platform: state
+    entity_id:
+      - sensor.heater_couch_actual
+      - sensor.heater_bed_actual
+      - sensor.heater_kitchen_actual
+      - sensor.heater_couch_set
+      - sensor.heater_bed_set
+      - sensor.heater_kitchen_set
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: >
+          {% set diff = (((float(states.sensor.heater_couch_actual.state) + float(states.sensor.heater_bed_actual.state) + float(states.sensor.heater_kitchen_actual.state)) / 3) - ((float(states.sensor.heater_couch_set.state) + float(states.sensor.heater_bed_set.state) + float(states.sensor.heater_kitchen_set.state)) / 3)) %}
+          {{ (diff | abs) < 2 }}
+      - condition: state
+        entity_id: input_boolean.fan_override
+        state: 'off'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.fan_mode_auto
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.fan_mode_diff
+
+- trigger:
+    platform: state
+    entity_id: input_boolean.fan_mode_diff
+  condition:
+    condition: state
+    entity_id: input_boolean.fan_override
+    state: 'off'
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: 'things/fan/setLevel/req'
+        payload_template: >
+          {"setLevel":{% if states.input_boolean.fan_mode_diff.state == 'on' %}1{% else %}0{% endif %}}'

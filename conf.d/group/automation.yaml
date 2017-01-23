@@ -6,4 +6,5 @@ entities:
   - group.scripts
   - input_boolean.fan_mode_auto
   - input_boolean.fan_mode_auto_on
+  - input_boolean.fan_mode_diff
   - input_boolean.fan_override
