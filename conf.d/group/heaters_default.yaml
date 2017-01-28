@@ -1,18 +1,4 @@
 name: Heaters
 entities:
-  - script.heaters_mode_auto
-  - script.heaters_mode_manual
-  - script.heaters_mode_boost
-  - sensor.heater_bed_mode
-  - sensor.heater_couch_mode
-  - sensor.heater_kitchen_mode
-  - input_select.heaters_temp_choose
-  - sensor.heater_bed_set
-  - sensor.heater_couch_set
-  - sensor.heater_kitchen_set
-  - sensor.heater_bed_actual
-  - sensor.heater_couch_actual
-  - sensor.heater_kitchen_actual
-  - sensor.heaters_diff
-  - sensor.heaters_valve_max
-  - input_boolean.heaters_override
+  - input_select.heaters_mode
+  - input_slider.heaters_temp

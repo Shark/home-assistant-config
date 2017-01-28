@@ -2,6 +2,7 @@ name: Heaters
 view: yes
 icon: 'mdi:radiator'
 entities:
+  - group.heaters_control
   - group.heater_bed
   - group.heater_couch
   - group.heater_kitchen

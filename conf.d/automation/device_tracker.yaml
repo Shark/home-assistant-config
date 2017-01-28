@@ -3,10 +3,6 @@
     entity_id: device_tracker.felix_iphone7
     zone: zone.home
     event: enter
-  condition:
-    condition: state
-    entity_id: input_boolean.heaters_override
-    state: 'off'
   action:
     - service: notify.pushover
       data:
@@ -20,10 +16,6 @@
     entity_id: device_tracker.felix_iphone7
     zone: zone.home
     event: leave
-  condition:
-    condition: state
-    entity_id: input_boolean.heaters_override
-    state: 'off'
   action:
     - service: homeassistant.turn_on
       entity_id: script.leaving_home

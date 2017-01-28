@@ -43,6 +43,3 @@ switch.nas_services:
 switch.nightstand:
   emulated_hue: true
   emulated_hue_name: Nachttisch
-input_boolean.heaters_override:
-  emulated_hue: true
-  emulated_hue_name: Heizungssperre

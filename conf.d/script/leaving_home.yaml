@@ -1,33 +1,14 @@
 sequence:
-  - condition: state
-    entity_id: input_boolean.heaters_override
-    state: 'off'
-  - service: mqtt.publish
-    data_template:
-      topic: "things/heater_bed/setMode/req"
-      payload_template: "{\"setMode\": \"manual\"}"
-  - service: mqtt.publish
-    data_template:
-      topic: "things/heater_couch/setMode/req"
-      payload_template: "{\"setMode\": \"manual\"}"
-  - service: mqtt.publish
-    data_template:
-      topic: "things/heater_kitchen/setMode/req"
-      payload_template: "{\"setMode\": \"manual\"}"
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.heaters_mode
+      option: manual
   - delay:
       seconds: 5
-  - service: mqtt.publish
-    data_template:
-      topic: "things/heater_bed/setTemperature/req"
-      payload_template: "{\"setTemperature\": 17.0}"
-  - service: mqtt.publish
-    data_template:
-      topic: "things/heater_couch/setTemperature/req"
-      payload_template: "{\"setTemperature\": 17.0}"
-  - service: mqtt.publish
-    data_template:
-      topic: "things/heater_kitchen/setTemperature/req"
-      payload_template: "{\"setTemperature\": 17.0}"
+  - service: input_slider.select_value
+    data:
+      entity_id: input_slider.heaters_temp
+      value: 17.0
 
   # Fan
   - service: homeassistant.turn_off

@@ -1,48 +1,32 @@
 - trigger:
     platform: state
-    entity_id: input_select.heater_couch_temp_choose
+    entity_id: input_slider.heaters_temp
   action:
     - service: mqtt.publish
       data_template:
         topic: "things/heater_couch/setTemperature/req"
         payload_template: "{\"setTemperature\": {{ trigger.to_state.state | float }}}"
-- trigger:
-    platform: state
-    entity_id: input_select.heater_couch_mode_choose
-  action:
-    - service: mqtt.publish
-      data_template:
-        topic: "things/heater_couch/setMode/req"
-        payload_template: "{\"setMode\": \"{{ trigger.to_state.state }}\"}"
-- trigger:
-    platform: state
-    entity_id: input_select.heater_bed_temp_choose
-  action:
     - service: mqtt.publish
       data_template:
         topic: "things/heater_bed/setTemperature/req"
-        payload_template: "{\"setTemperature\": {{ trigger.to_state.state | float }}}"
-- trigger:
-    platform: state
-    entity_id: input_select.heater_bed_mode_choose
-  action:
-    - service: mqtt.publish
-      data_template:
-        topic: "things/heater_bed/setMode/req"
-        payload_template: "{\"setMode\": \"{{ trigger.to_state.state }}\"}"
-- trigger:
-    platform: state
-    entity_id: input_select.heaters_temp_choose
-  action:
-    - service: mqtt.publish
-      data_template:
-        topic: "things/heater_bed/setTemperature/req"
-        payload_template: "{\"setTemperature\": {{ trigger.to_state.state | float }}}"
-    - service: mqtt.publish
-      data_template:
-        topic: "things/heater_couch/setTemperature/req"
         payload_template: "{\"setTemperature\": {{ trigger.to_state.state | float }}}"
     - service: mqtt.publish
       data_template:
         topic: "things/heater_kitchen/setTemperature/req"
         payload_template: "{\"setTemperature\": {{ trigger.to_state.state | float }}}"
+- trigger:
+    platform: state
+    entity_id: input_select.heaters_mode
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "things/heater_couch/setMode/req"
+        payload_template: "{\"setMode\": \"{{ trigger.to_state.state }}\"}"
+    - service: mqtt.publish
+      data_template:
+        topic: "things/heater_bed/setMode/req"
+        payload_template: "{\"setMode\": \"{{ trigger.to_state.state }}\"}"
+    - service: mqtt.publish
+      data_template:
+        topic: "things/heater_kitchen/setMode/req"
+        payload_template: "{\"setMode\": \"{{ trigger.to_state.state }}\"}"
