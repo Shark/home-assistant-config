@@ -1,0 +1,6 @@
+stereo_volume:
+  name: Stereo Volume
+  initial: 0
+  min: 0
+  max: 12
+  step: 1

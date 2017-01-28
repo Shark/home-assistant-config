@@ -16,3 +16,6 @@ fan_mode_diff:
 fan_override:
   name: Fan Override
   initial: off
+stereo_volume_managed:
+  name: Stereo Volume is Managed
+  initial: off

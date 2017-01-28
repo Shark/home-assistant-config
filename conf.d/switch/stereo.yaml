@@ -1,0 +1,5 @@
+- platform: mqtt
+  name: "Stereo Power"
+  command_topic: "things/stereo/togglePower/req"
+  payload_on: "{\"togglePower\":null}"
+  payload_off: "{\"togglePower\":null}"

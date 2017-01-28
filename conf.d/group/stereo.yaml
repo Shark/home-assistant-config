@@ -1,0 +1,5 @@
+name: Stereo
+entities:
+  - switch.stereo_power
+  - input_slider.stereo_volume
+  - input_boolean.stereo_volume_managed
