@@ -1,0 +1,8 @@
+name: Desk
+entities:
+  - switch.desk
+  - sensor.desk_power
+  - light.desk
+  - sensor.desk
+  - sensor.desk_2
+  - sensor.desk_3

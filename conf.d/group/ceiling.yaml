@@ -1,0 +1,7 @@
+name: Ceiling
+entities:
+  - switch.ceiling_west
+  - light.ceiling_west
+  - switch.ceiling_east
+  - light.ceiling_east
+  - switch.kodi
