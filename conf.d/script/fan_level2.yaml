@@ -1,6 +1,0 @@
-alias: Fan Level 2
-sequence:
-  - service: mqtt.publish
-    data_template:
-      topic: "things/fan/setLevel/req"
-      payload_template: "{\"setLevel\":2}"

@@ -1,12 +1,6 @@
 name: Fan
 entities:
   - fan.fan
-  - script.fan_level0
-  - script.fan_level1
-  - script.fan_level2
-  - script.fan_level3
-  - sensor.fan
+  - input_slider.fan_speed
   - sensor.fan_level
-  - input_boolean.fan_mode_auto
-  - input_boolean.fan_mode_diff
-  - input_boolean.fan_override
+  - sensor.fan

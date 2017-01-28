@@ -13,10 +13,10 @@
         entity_id: input_boolean.fan_override
         state: 'off'
   action:
-    - service: mqtt.publish
+    - service: input_slider.select_value
       data_template:
-        topic: 'things/fan/setLevel/req'
-        payload_template: '{"setLevel":1}'
+        entity_id: input_slider.fan_speed
+        value: 1
     - service: homeassistant.turn_on
       entity_id: input_boolean.fan_mode_auto_on
 - trigger:
@@ -33,10 +33,10 @@
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.fan_mode_auto_on
-    - service: mqtt.publish
+    - service: input_slider.select_value
       data_template:
-        topic: 'things/fan/setLevel/req'
-        payload_template: '{"setLevel":0}'
+        entity_id: input_slider.fan_speed
+        value: 0
 
 # Fan Mode Diff
 - trigger:
@@ -143,3 +143,21 @@
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.fan_override
+
+# Fan Speed
+- trigger:
+    platform: state
+    entity_id: input_slider.fan_speed
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "things/fan/setLevel/req"
+        payload_template: "{\"setLevel\":{{ float(trigger.to_state.state) }}}"
+- trigger:
+    platform: mqtt
+    topic: 'things/fan/setLevel/res'
+  action:
+    - service: input_slider.select_value
+      data_template:
+        entity_id: input_slider.fan_speed
+        value: '{{ float(trigger.payload_json.setLevel) }}'
