@@ -4,4 +4,3 @@ entities:
   - light.ceiling_west
   - switch.ceiling_east
   - light.ceiling_east
-  - switch.kodi

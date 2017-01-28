@@ -1,2 +1,5 @@
 name: Bathroom
-entities: sensor.bathroom, sensor.bathroom_2, binary_sensor.bathroom_window, sensor.bathroom_window_aliveness
+entities:
+  - sensor.bathroom
+  - sensor.bathroom_2
+  - binary_sensor.bathroom_window

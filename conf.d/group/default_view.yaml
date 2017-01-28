@@ -8,4 +8,4 @@ entities:
   - group.presence
   - group.scenes
   - group.fan
-  - group.stereo
+  - group.media

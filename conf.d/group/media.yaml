@@ -1,0 +1,7 @@
+name: Media
+entities:
+  - switch.stereo_power
+  - input_slider.stereo_volume
+  - switch.kodi
+  - switch.nas_services
+  - sensor.nas_services
