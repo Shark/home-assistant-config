@@ -54,4 +54,7 @@ StereoVolumeIntent:
     service: input_slider.select_value
     data_template:
       entity_id: input_slider.stereo_volume
-      value: '{{ Volume }}'
+      value: '{% if Volume == "leise" %}5{% elif Volume == "normal" %}7{% elif Volume == "laut" %}9{% endif %}'
+  speech:
+    type: plaintext
+    text: !include replies/confirm.yaml
