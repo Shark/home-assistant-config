@@ -12,7 +12,7 @@
       data:
         message: Welcome at home!
     - service: homeassistant.turn_on
-      entity_id: script.heaters_coming_home
+      entity_id: script.coming_home
     - service: homeassistant.turn_on
       entity_id: input_boolean.fan_mode_auto
 - trigger:
@@ -26,6 +26,6 @@
     state: 'off'
   action:
     - service: homeassistant.turn_on
-      entity_id: script.heaters_leaving_home
+      entity_id: script.leaving_home
     - service: homeassistant.turn_off
       entity_id: input_boolean.fan_mode_auto

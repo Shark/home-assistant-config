@@ -1,5 +1,5 @@
 name: Scripts
 entities:
   - script.turn_on_lights
-  - script.heaters_coming_home
-  - script.heaters_leaving_home
+  - script.coming_home
+  - script.leaving_home

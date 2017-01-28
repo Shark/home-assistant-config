@@ -10,20 +10,27 @@ ComingHomeIntent:
   action:
     - service: homeassistant.turn_on
       entity_id:
-      - script.turn_on_lights
-      - script.heaters_coming_home
+        - script.turn_on_lights
+    - delay:
+        seconds: 10
+    - service: homeassistant.turn_on
+      entity_id:
+        - script.coming_home
+        - scene.room_lighting
   speech:
     type: plaintext
     text: !include replies/welcome.yaml
 LeavingHomeIntent:
   action:
+    - service: homeassistant.turn_on
+      entity_id: script.leaving_home
+    - delay:
+        seconds: 5
     - service: homeassistant.turn_off
       entity_id:
         - group.all_lights
         - group.living_room
         - group.kodroid
-    - service: homeassistant.turn_on
-      entity_id: script.heaters_leaving_home
   speech:
     type: plaintext
     text: !include replies/goodbye.yaml

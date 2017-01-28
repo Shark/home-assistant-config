@@ -4,5 +4,3 @@ sequence:
       - switch.ceiling_east
       - switch.ceiling_west
       - switch.bed
-  - service: scene.turn_on
-    entity_id: scene.room_lighting

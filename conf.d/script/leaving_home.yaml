@@ -34,10 +34,13 @@ sequence:
     entity_id:
       - input_boolean.fan_mode_auto
       - input_boolean.fan_mode_diff
-      - switch.stereo_power
   - service: homeassistant.turn_on
     entity_id: input_boolean.fan_override
   - service: mqtt.publish
     data_template:
       topic: 'things/fan/setLevel/req'
       payload_template: '{"setLevel":0}'
+
+  # Stereo
+  - service: homeassistant.turn_off
+    entity_id: switch.stereo_power
