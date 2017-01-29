@@ -1,0 +1,18 @@
+- trigger:
+    platform: state
+    entity_id: input_boolean.tv_power
+    state: 'on'
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "things/tv/setPower/req"
+        payload_template: "{\"setPower\":true}"
+
+- trigger:
+    platform: state
+    entity_id: input_boolean.tv_power
+    state: 'off'
+  action:
+    - service: media_player.turn_off
+      data:
+        entity_id: media_player.tv

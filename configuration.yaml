@@ -70,6 +70,7 @@ input_slider: !include conf.d/input_slider.yaml
 input_select: !include conf.d/input_select.yaml
 script: !include_dir_named conf.d/script/
 fan: !include conf.d/fan.yaml
+media_player: !include conf.d/media_player.yaml
 #camera: !include conf.d/camera.yaml
 
 device_tracker:

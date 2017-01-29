@@ -20,6 +20,7 @@ main() {
                   -e HASS_ZABBIX_URL=http://test.invalid \
                   -e HASS_MQTT_USERNAME=empty \
                   -e HASS_MQTT_PASSWORD=empty \
+                  -e HASS_WEBOSTV_HOST=127.0.0.1 \
                   homeassistant/home-assistant \
                   python -m homeassistant \
                          --config /config \

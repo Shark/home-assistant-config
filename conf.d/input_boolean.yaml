@@ -15,3 +15,6 @@ fan_override:
 stereo_volume_managed:
   name: Stereo Volume is Managed
   initial: off
+tv_power:
+  name: TV Power
+  initial: off

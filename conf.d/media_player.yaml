@@ -1,0 +1,10 @@
+- platform: webostv
+  host: !env_var HASS_WEBOSTV_HOST
+  name: TV
+  customize:
+    sources:
+      - livetv
+      - youtube
+      - netflix
+      - k-odroid
+      - ps4

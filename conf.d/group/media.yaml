@@ -3,6 +3,7 @@ entities:
   - switch.media_power
   - switch.stereo_power
   - input_slider.stereo_volume
+  - input_boolean.tv_power
   - switch.kodi
   - switch.nas_services
   - sensor.nas_services
