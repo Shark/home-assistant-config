@@ -1,5 +1,6 @@
 name: Media
 entities:
+  - switch.media_power
   - switch.stereo_power
   - input_slider.stereo_volume
   - switch.kodi
