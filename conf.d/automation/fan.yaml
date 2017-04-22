@@ -153,11 +153,3 @@
       data_template:
         topic: "things/fan/setLevel/req"
         payload_template: "{\"setLevel\":{{ float(trigger.to_state.state) }}}"
-- trigger:
-    platform: mqtt
-    topic: 'things/fan/setLevel/res'
-  action:
-    - service: input_slider.select_value
-      data_template:
-        entity_id: input_slider.fan_speed
-        value: '{{ float(trigger.payload_json.setLevel) }}'
