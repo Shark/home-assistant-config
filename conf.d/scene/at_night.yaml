@@ -12,3 +12,7 @@
       state: off
     light.desk:
       state: off
+    group.kitchen:
+      state: off
+    light.entrance:
+      state: off

@@ -1,5 +1,6 @@
 name: Ceiling
 entities:
+  - light.entrance
   - switch.ceiling_west
   - light.ceiling_west
   - switch.ceiling_east

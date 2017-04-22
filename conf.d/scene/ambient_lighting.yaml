@@ -16,3 +16,10 @@
       state: on
       brightness: 130
       rgb_color: [255, 197, 143]
+    group.kitchen:
+      state: on
+      color_temp: 154 
+      brightness: 160
+    light.entrance:
+      state: on
+      brightness: 160
