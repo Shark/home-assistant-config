@@ -1,3 +1,11 @@
+LightIntent:
+  action:
+    service: scene.turn_on
+    data_template:
+      entity_id: scene.{% if Power == 'an' %}room_lighting{% else %}lights_out{% endif %}
+  speech:
+    type: plaintext
+    text: !include replies/confirm.yaml
 ActivateSceneIntent:
   action:
     service: scene.turn_on

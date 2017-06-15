@@ -1,5 +1,5 @@
 >
-  {{ [
+  {% set responses = [
        "Bon giorno, John Porno",
        "Buongiorno Adorno",
        "Guten Tacho",
@@ -17,4 +17,7 @@
        "Habe die Ehre",
        "Servus",
        "Wir begrüßen die zugestiegenen Fahrgäste im Zug der Deutschen Bahn nach Meppen."
-     ] | random }} 
+     ]
+  %}
+  {% set rindex = (range(0, (responses | length - 1)) | random) %}
+  {{responses[rindex]}}

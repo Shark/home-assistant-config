@@ -1,5 +1,5 @@
 >
-  {{ [
+  {% set responses = [
        "Au reservoir",
        "Auf Video sehen",
        "Bis baldrian",
@@ -31,4 +31,7 @@
        "Tschüssikowski",
        "Wir riechen uns.",
        "Wir danken für die Reise mit der Deutschen Bahn, auf Wiedersehen!"
-     ] | random }} 
+     ]
+  %}
+  {% set rindex = (range(0, (responses | length - 1)) | random) %}
+  {{responses[rindex]}}
