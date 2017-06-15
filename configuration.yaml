@@ -62,7 +62,6 @@ binary_sensor: !include_dir_merge_list conf.d/binary_sensor/
 group: !include_dir_named conf.d/group/
 zone: !include_dir_list conf.d/zone/
 automation: !include_dir_merge_list conf.d/automation/
-panel_iframe: !include_dir_named conf.d/panel_iframe/
 light: !include_dir_merge_list conf.d/light/
 scene: !include_dir_merge_list conf.d/scene/
 input_boolean: !include conf.d/input_boolean.yaml
@@ -93,11 +92,8 @@ ifttt:
 #  username: guest
 #  password: guest
 
-emulated_hue:
-  host_ip: !env_var HASS_HUE_HOST_IP
-  listen_port: 8300
-  expose_by_default: false
-
 tradfri:
   host: !env_var HASS_TRADFRI_HOST
   api_key: !env_var HASS_TRADFRI_API_KEY
+
+ios:

@@ -16,8 +16,6 @@ main() {
                   -e HASS_PUSHOVER_USER_KEY=empty \
                   -e HASS_APCUPSD_HOST=empty \
                   -e HASS_IFTTT_KEY=empty \
-                  -e HASS_HUE_HOST_IP=empty \
-                  -e HASS_ZABBIX_URL=http://test.invalid \
                   -e HASS_MQTT_USERNAME=empty \
                   -e HASS_MQTT_PASSWORD=empty \
                   -e HASS_TRADFRI_HOST=empty \
