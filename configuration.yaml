@@ -97,3 +97,16 @@ tradfri:
   api_key: !env_var HASS_TRADFRI_API_KEY
 
 ios:
+
+media_player:
+  - platform: webostv
+    host: !env_var HASS_WEBOSTV_HOST
+    name: TV
+    customize:
+      sources:
+        - livetv
+        - ps4
+        - 'k-odroid'
+        - laptop
+        - youtube
+        - netflix

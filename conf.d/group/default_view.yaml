@@ -10,3 +10,4 @@ entities:
   - group.fan
   - group.media
   - group.kitchen
+  - media_player.tv
