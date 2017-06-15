@@ -7,3 +7,5 @@ entities:
   - scene.ambient_lighting
   - scene.room_lighting
   - scene.lights_out
+  - scene.media
+  - scene.kodi

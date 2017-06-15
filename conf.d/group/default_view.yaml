@@ -10,4 +10,5 @@ entities:
   - group.fan
   - group.media
   - group.kitchen
+  - group.tv
   - media_player.tv

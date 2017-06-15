@@ -1,0 +1,10 @@
+- name: Kodi
+  entities:
+    scene.media:
+      state: on
+    switch.tv:
+      state: on
+    switch.kodi:
+      state: on
+    media_player.tv:
+      source: K-ODROID

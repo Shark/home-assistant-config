@@ -105,8 +105,8 @@ media_player:
     customize:
       sources:
         - livetv
-        - ps4
-        - 'k-odroid'
-        - laptop
         - youtube
         - netflix
+        - hdmi1
+        - hdmi2
+        - hdmi3

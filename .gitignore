@@ -2,4 +2,6 @@
 known_devices.yaml
 emulated_hue_ids.json
 .ios.conf
+webostv.conf
 *.log
+*.swp
