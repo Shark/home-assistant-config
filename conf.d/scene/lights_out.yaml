@@ -6,5 +6,3 @@
       state: off
     switch.kodi:
       state: off
-    switch.nas_services:
-      state: off
