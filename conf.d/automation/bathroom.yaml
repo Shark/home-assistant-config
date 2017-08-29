@@ -1,17 +1,64 @@
 - trigger:
     platform: state
     entity_id: binary_sensor.bathroom_motion
-    to: 'on'
-  action:
-    - service: homeassistant.turn_on
-      entity_id: group.bathroom
-
-- trigger:
-    platform: state
-    entity_id: binary_sensor.bathroom_motion
     to: 'off'
     for:
       minutes: 5
   action:
     - service: homeassistant.turn_off
       entity_id: group.bathroom
+
+- trigger:
+    platform: state
+    entity_id: binary_sensor.bathroom_motion
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        after: '00:00:00'
+        before: '06:00:00'
+      - condition: state
+        entity_id: group.all_lights
+        state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: group.bathroom
+      data:
+        color_temp: 370
+        brightness_pct: 100
+
+- trigger:
+    platform: state
+    entity_id: binary_sensor.bathroom_motion
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        after: '00:00:00'
+        before: '06:00:00'
+      - condition: state
+        entity_id: group.all_lights
+        state: 'off'
+  action:
+    - service: light.turn_on
+      entity_id: group.bathroom
+      data:
+        color_temp: 370
+        brightness_pct: 33
+
+- trigger:
+    platform: state
+    entity_id: binary_sensor.bathroom_motion
+    to: 'on'
+  condition:
+    condition: time
+    after: '05:59:59'
+    before: '00:00:00'
+  action:
+    - service: light.turn_on
+      entity_id: group.bathroom
+      data:
+        color_temp: 250
+        brightness_pct: 100
