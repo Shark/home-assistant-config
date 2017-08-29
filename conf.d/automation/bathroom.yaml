@@ -1,0 +1,17 @@
+- trigger:
+    platform: state
+    entity_id: binary_sensor.bathroom_motion
+    to: 'on'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: group.bathroom
+
+- trigger:
+    platform: state
+    entity_id: binary_sensor.bathroom_motion
+    to: 'off'
+    for:
+      minutes: 5
+  action:
+    - service: homeassistant.turn_off
+      entity_id: group.bathroom

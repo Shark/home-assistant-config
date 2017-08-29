@@ -1,5 +1,9 @@
 name: Bathroom
 entities:
+  - light.bathroom_1
+  - light.bathroom_2
+  - light.bathroom_3
   - sensor.bathroom
   - sensor.bathroom_2
+  - binary_sensor.bathroom_motion
   - binary_sensor.bathroom_window
