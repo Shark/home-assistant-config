@@ -1,7 +1,7 @@
 - trigger:
     platform: state
     entity_id: input_boolean.in_bed
-    state: 'on'
+    to: 'on'
     for:
       hours: 1
   action:

@@ -1,7 +1,7 @@
 - trigger:
     platform: state
     entity_id: switch.tv
-    state: 'off'
+    to: 'off'
   action:
     - service: homeassistant.turn_off
       entity_id: media_player.tv

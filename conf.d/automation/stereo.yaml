@@ -8,7 +8,7 @@
 - trigger:
     platform: state
     entity_id: input_boolean.stereo_volume_managed
-    state: 'off'
+    to: 'off'
   action:
     - service: mqtt.publish
       data_template:

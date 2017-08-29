@@ -22,7 +22,7 @@
 - trigger:
     platform: state
     entity_id: input_boolean.fan_mode_auto_on
-    state: 'on'
+    to: 'on'
     for:
       minutes: 5
       seconds: 0
@@ -107,7 +107,7 @@
 - trigger:
     platform: state
     entity_id: input_boolean.fan_override
-    state: 'on'
+    to: 'on'
   action:
     - service: homeassistant.turn_off
       entity_id:
@@ -121,7 +121,7 @@
 - trigger:
     platform: state
     entity_id: input_boolean.fan_override
-    state: 'off'
+    to: 'off'
   action:
     - service: homeassistant.turn_on
       entity_id: input_boolean.fan_mode_auto
