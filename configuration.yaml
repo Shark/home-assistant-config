@@ -18,6 +18,8 @@ logger:
 # Enables the frontend
 frontend:
 
+config:
+
 http:
   api_password: !env_var HASS_HTTP_API_PASSWORD
 
@@ -61,13 +63,15 @@ sensor: !include_dir_merge_list conf.d/sensor/
 binary_sensor: !include_dir_merge_list conf.d/binary_sensor/
 group: !include_dir_named conf.d/group/
 zone: !include_dir_list conf.d/zone/
-automation: !include_dir_merge_list conf.d/automation/
+automation old: !include_dir_merge_list conf.d/automation/
+automation: !include automations.yaml
 light: !include_dir_merge_list conf.d/light/
 scene: !include_dir_merge_list conf.d/scene/
 input_boolean: !include conf.d/input_boolean.yaml
 input_slider: !include conf.d/input_slider.yaml
 input_select: !include conf.d/input_select.yaml
-script: !include_dir_named conf.d/script/
+script old: !include_dir_named conf.d/script/
+script: !include scripts.yaml
 fan: !include conf.d/fan.yaml
 #camera: !include conf.d/camera.yaml
 
