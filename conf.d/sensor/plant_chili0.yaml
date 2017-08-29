@@ -1,0 +1,10 @@
+- platform: mqtt
+  state_topic: 'things/chili0/waterLevel/res'
+  name: Chili 0 Water Level
+  unit_of_measurement: s
+  value_template: '{{ value | int }}'
+- platform: mqtt
+  state_topic: 'things/chili0/moisture/res'
+  name: Chili 0 Moisture
+  unit_of_measurement: '%'
+  value_template: '{{ value | float }}'

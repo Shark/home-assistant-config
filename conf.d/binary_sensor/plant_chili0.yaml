@@ -1,0 +1,6 @@
+- platform: mqtt
+  name: Chili 0 Pump State
+  state_topic: 'things/chili0/pumpState/res'
+  payload_on: 'on'
+  payload_off: 'off'
+  device_class: moving

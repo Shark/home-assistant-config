@@ -1,0 +1,6 @@
+- platform: mqtt
+  name: Draco L Pump State
+  state_topic: 'things/dracoL/pumpState/res'
+  payload_on: 'on'
+  payload_off: 'off'
+  device_class: moving

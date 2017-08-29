@@ -1,0 +1,7 @@
+name: Plants
+view: yes
+icon: 'mdi:flower'
+entities:
+  - group.plant_control
+  - group.plant_dracol
+  - group.plant_chili0

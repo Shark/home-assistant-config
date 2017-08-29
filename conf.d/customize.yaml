@@ -43,3 +43,21 @@ switch.nas_services:
 switch.nightstand:
   emulated_hue: true
   emulated_hue_name: Nachttisch
+
+binary_sensor.draco_l_pump_state:
+  friendly_name: Pump State
+sensor.draco_l_water_level:
+  friendly_name: Water Level
+  icon: mdi:battery-60
+sensor.draco_l_moisture:
+  friendly_name: Moisture
+  icon: mdi:water
+
+binary_sensor.chili_0_pump_state:
+  friendly_name: Pump State
+sensor.chili_0_water_level:
+  friendly_name: Water Level
+  icon: mdi:battery-60
+sensor.chili_0_moisture:
+  friendly_name: Moisture
+  icon: mdi:water

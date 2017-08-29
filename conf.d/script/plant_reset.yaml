@@ -1,0 +1,6 @@
+alias: Reset Pump Water Level
+sequence:
+  - service: mqtt.publish
+    data:
+      topic: things/dracoL/rstWaterLvl/req
+      payload: ''
