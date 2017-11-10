@@ -4,8 +4,6 @@ sensor.desk_2:
   icon: "mdi:water"
 sensor.desk_3:
   icon: "mdi:eye"
-sensor.ups_wattage:
-  icon: "mdi:gauge"
 sensor.nas_services:
   icon: "mdi:settings"
 

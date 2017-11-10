@@ -86,9 +86,6 @@ notify:
   api_key: !env_var HASS_PUSHOVER_API_KEY
   user_key: !env_var HASS_PUSHOVER_USER_KEY
 
-apcupsd:
-  host: !env_var HASS_APCUPSD_HOST
-
 ifttt:
   key: !env_var HASS_IFTTT_KEY
 

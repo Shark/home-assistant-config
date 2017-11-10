@@ -14,7 +14,6 @@ main() {
                   -e HASS_DB_URL=empty \
                   -e HASS_PUSHOVER_API_KEY=empty \
                   -e HASS_PUSHOVER_USER_KEY=empty \
-                  -e HASS_APCUPSD_HOST=empty \
                   -e HASS_IFTTT_KEY=empty \
                   -e HASS_MQTT_USERNAME=empty \
                   -e HASS_MQTT_PASSWORD=empty \
