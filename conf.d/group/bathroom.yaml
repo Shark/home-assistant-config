@@ -6,4 +6,5 @@ entities:
   - sensor.bathroom
   - sensor.bathroom_2
   - binary_sensor.bathroom_motion
+  - timer.bathroom
   - binary_sensor.bathroom_window

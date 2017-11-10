@@ -74,6 +74,7 @@ input_select: !include conf.d/input_select.yaml
 script old: !include_dir_named conf.d/script/
 script: !include scripts.yaml
 fan: !include conf.d/fan.yaml
+timer: !include conf.d/timer.yaml
 #camera: !include conf.d/camera.yaml
 
 device_tracker:

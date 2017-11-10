@@ -59,3 +59,6 @@ sensor.chili_0_water_level:
 sensor.chili_0_moisture:
   friendly_name: Moisture
   icon: mdi:water
+
+timer.bathroom:
+  friendly_name: Bathroom Timer
