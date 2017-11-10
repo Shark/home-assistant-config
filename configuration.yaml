@@ -114,3 +114,8 @@ media_player:
   - platform: onkyo
     host: !env_var HASS_ONKYO_HOST
     name: Receiver
+    sources:
+      tv: TV
+      strm-box: Alexa
+      network: Network
+      bluetooth: Bluetooth
