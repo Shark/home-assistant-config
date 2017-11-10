@@ -114,3 +114,6 @@ media_player:
         - hdmi1
         - hdmi2
         - hdmi3
+  - platform: onkyo
+    host: !env_var HASS_ONKYO_HOST
+    name: Receiver

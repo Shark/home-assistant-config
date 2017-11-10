@@ -1,9 +1,3 @@
-stereo_volume:
-  name: Stereo Volume
-  initial: 0
-  min: 0
-  max: 12
-  step: 1
 heaters_temp:
   name: Heaters Temperature
   initial: 12.0

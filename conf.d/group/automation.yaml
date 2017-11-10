@@ -11,5 +11,4 @@ entities:
   - input_boolean.fan_mode_auto_on
   - input_boolean.fan_mode_diff
   - input_boolean.fan_override
-  - input_boolean.stereo_volume_managed
   - sensor.bathroom_window_aliveness

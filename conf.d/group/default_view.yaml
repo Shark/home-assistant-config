@@ -12,3 +12,4 @@ entities:
   - group.kitchen
   - group.tv
   - media_player.tv
+  - media_player.receiver

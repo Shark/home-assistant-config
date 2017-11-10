@@ -25,7 +25,3 @@ sequence:
     data_template:
       topic: 'things/fan/setLevel/req'
       payload_template: '{"setLevel":0}'
-
-  # Stereo
-  - service: homeassistant.turn_off
-    entity_id: switch.stereo_power

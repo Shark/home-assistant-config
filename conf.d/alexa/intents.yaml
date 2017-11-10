@@ -50,19 +50,3 @@ TemperatureInfoIntent:
       an den Heizungen. Am Schreibtisch sind es {{ states("sensor.desk") | round(1) | replace(".", ",") }} Grad bei {{ states("sensor.desk_2") | round }}% Luftfeuchtigkeit.
       In der Küche messe ich {{ states("sensor.heater_kitchen_actual") | round(1) | replace(".", ",") }} Grad. Im Bad sind {{ states("sensor.bathroom") | round(1) | replace(".", ",") }} Grad bei
       {{ states("sensor.bathroom_2") | round }}% Luftfeuchtigkeit.
-StereoPowerIntent:
-  action:
-    service_template: homeassistant.{% if Power != "aus" %}turn_on{% else %}turn_off{% endif %}
-    entity_id: switch.stereo_power
-  speech:
-    type: plain
-    text: !include replies/confirm.yaml
-StereoVolumeIntent:
-  action:
-    service: input_slider.select_value
-    data_template:
-      entity_id: input_slider.stereo_volume
-      value: '{% if Volume == "leise" %}5{% elif Volume == "normal" %}7{% elif Volume == "laut" %}9{% endif %}'
-  speech:
-    type: plain
-    text: !include replies/confirm.yaml

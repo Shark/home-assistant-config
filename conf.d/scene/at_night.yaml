@@ -20,5 +20,3 @@
       state: off
     switch.kodi:
       state: off
-    switch.stereo_power:
-      state: off

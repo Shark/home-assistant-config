@@ -14,7 +14,3 @@ sequence:
       - input_boolean.fan_mode_auto
   - service: homeassistant.turn_off
     entity_id: input_boolean.fan_override
-
-  # Stereo
-  - service: homeassistant.turn_on
-    entity_id: switch.stereo_power
