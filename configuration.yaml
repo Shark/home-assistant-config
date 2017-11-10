@@ -38,7 +38,8 @@ history:
 
 recorder:
   db_url: !env_var HASS_DB_URL
-  purge_days: 60
+  purge_interval: 2
+  purge_keep_days: 60
 
 #influxdb:
 #  host: influxdb
@@ -68,7 +69,7 @@ automation: !include automations.yaml
 light: !include_dir_merge_list conf.d/light/
 scene: !include_dir_merge_list conf.d/scene/
 input_boolean: !include conf.d/input_boolean.yaml
-input_slider: !include conf.d/input_slider.yaml
+input_number: !include conf.d/input_number.yaml
 input_select: !include conf.d/input_select.yaml
 script old: !include_dir_named conf.d/script/
 script: !include scripts.yaml
@@ -98,7 +99,6 @@ ifttt:
 
 tradfri:
   host: !env_var HASS_TRADFRI_HOST
-  api_key: !env_var HASS_TRADFRI_API_KEY
 
 ios:
 

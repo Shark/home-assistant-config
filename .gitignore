@@ -5,3 +5,5 @@ emulated_hue_ids.json
 webostv.conf
 *.log
 *.swp
+.tradfri_psk.conf
+deps/*

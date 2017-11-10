@@ -19,7 +19,6 @@ main() {
                   -e HASS_MQTT_USERNAME=empty \
                   -e HASS_MQTT_PASSWORD=empty \
                   -e HASS_TRADFRI_HOST=empty \
-                  -e HASS_TRADFRI_API_KEY=empty \
                   -e HASS_WEBOSTV_HOST=empty \
                   homeassistant/home-assistant \
                   python -m homeassistant \
