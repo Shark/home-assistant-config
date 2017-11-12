@@ -9,9 +9,9 @@ sequence:
       option: manual
   - delay:
       seconds: 5
-  - service: input_slider.select_value
+  - service: input_number.select_value
     data:
-      entity_id: input_slider.heaters_temp
+      entity_id: input_number.heaters_temp
       value: 17.0
 
   # Fan

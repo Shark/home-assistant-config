@@ -13,9 +13,9 @@
         entity_id: input_boolean.fan_override
         state: 'off'
   action:
-    - service: input_slider.select_value
+    - service: input_number.set_value
       data_template:
-        entity_id: input_slider.fan_speed
+        entity_id: input_number.fan_speed
         value: 1
     - service: homeassistant.turn_on
       entity_id: input_boolean.fan_mode_auto_on
@@ -33,9 +33,9 @@
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.fan_mode_auto_on
-    - service: input_slider.select_value
+    - service: input_number.set_value
       data_template:
-        entity_id: input_slider.fan_speed
+        entity_id: input_number.fan_speed
         value: 0
 
 # Fan Mode Diff
@@ -147,7 +147,7 @@
 # Fan Speed
 - trigger:
     platform: state
-    entity_id: input_slider.fan_speed
+    entity_id: input_number.fan_speed
   action:
     - service: mqtt.publish
       data_template:

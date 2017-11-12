@@ -1,6 +1,6 @@
 name: Fan
 entities:
   - fan.fan
-  - input_slider.fan_speed
+  - input_number.fan_speed
   - sensor.fan_level
   - sensor.fan

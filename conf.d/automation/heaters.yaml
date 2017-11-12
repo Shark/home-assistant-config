@@ -1,6 +1,6 @@
 - trigger:
     platform: state
-    entity_id: input_slider.heaters_temp
+    entity_id: input_number.heaters_temp
   action:
     - service: mqtt.publish
       data_template:
