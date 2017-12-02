@@ -1,6 +1,0 @@
-alias: Pump for 10s
-sequence:
-  - service: mqtt.publish
-    data:
-      topic: things/dracoL/pumpState/req
-      payload: '10'

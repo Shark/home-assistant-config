@@ -1,6 +1,0 @@
-alias: Perform Quick Scan
-sequence:
-  - service: mqtt.publish
-    data:
-      topic: things/quickScan/setPower/req
-      payload: '{"setPower":true}'
