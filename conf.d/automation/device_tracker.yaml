@@ -1,6 +1,6 @@
 - trigger:
     platform: zone
-    entity_id: device_tracker.felix_iphone7
+    entity_id: device_tracker.felix_bq
     zone: zone.home
     event: enter
   action:
@@ -13,7 +13,7 @@
       entity_id: input_boolean.fan_mode_auto
 - trigger:
     platform: zone
-    entity_id: device_tracker.felix_iphone7
+    entity_id: device_tracker.felix_bq
     zone: zone.home
     event: leave
   action:
