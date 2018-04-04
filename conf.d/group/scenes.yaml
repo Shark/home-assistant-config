@@ -4,3 +4,4 @@ entities:
   - scene.studying
   - scene.reading
   - scene.dimmed
+  - scene.tv

@@ -1,24 +1,22 @@
-name: Dimmed
+name: TV
 entities:
   light.schreibtischlampe:
     state: on
-    brightness: 10
-    color_temp: 454
+    brightness: 30
+    color_temp: 328
   light.wand_links:
-    state: on
-    brightness: 15
-    color_temp: 454
+    state: off
   light.wand_rechts:
     state: on
-    brightness: 15
-    color_temp: 454
+    brightness: 30
+    color_temp: 328
   light.bett_unten:
     state: off
   light.bett_mitte:
     state: on
     brightness: 15
-    color_temp: 454
+    color_temp: 328
   light.bett_oben:
     state: on
     brightness: 15
-    color_temp: 454
+    color_temp: 328
