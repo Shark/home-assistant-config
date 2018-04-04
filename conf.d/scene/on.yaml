@@ -1,4 +1,4 @@
-name: Ein
+name: On
 entities:
   light.schreibtischlampe:
     state: on
