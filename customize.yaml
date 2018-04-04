@@ -7,40 +7,25 @@ sensor.desk_3:
 sensor.nas_services:
   icon: "mdi:settings"
 
-light.bed:
-  emulated_hue: true
-  emulated_hue_name: Bett
-light.ceiling_east:
-  emulated_hue: true
-  emulated_hue_name: Decke Ost
-light.ceiling_west:
-  emulated_hue: true
-  emulated_hue_name: Decke West
-light.desk:
-  emulated_hue: true
-  emulated_hue_name: Schreibtisch
-switch.bed:
-  emulated_hue: true
-  emulated_hue_name: Strom Bett
-switch.ceiling_east:
-  emulated_hue: true
-  emulated_hue_name: Strom Decke Ost
-switch.ceiling_west:
-  emulated_hue: true
-  emulated_hue_name: Strom Decke West
 switch.desk:
-  emulated_hue: true
-  emulated_hue_name: Strom Schreibtisch
-switch.kodi:
-  emulated_hue: true
-  emulated_hue_name: Kodi
-switch.nas_services:
-  icon: "mdi:settings"
-  emulated_hue: true
-  emulated_hue_name: Server-Dienste
-switch.nightstand:
-  emulated_hue: true
-  emulated_hue_name: Nachttisch
+  emulated_hue_hidden: false
+  emulated_hue_name: Schreibtisch
+
+script.coming_home:
+  emulated_hue_hidden: false
+  emulated_hue_name: Ankommen
+
+script.leaving_home:
+  emulated_hue_hidden: false
+  emulated_hue_name: Verlassen
+
+scene.room_lighting:
+  emulated_hue_hidden: false
+  emulated_hue_name: Lichter
+
+scene.lights_out:
+  emulated_hue_hidden: false
+  emulated_hue_name: Nacht
 
 binary_sensor.draco_l_pump_state:
   friendly_name: Pump State

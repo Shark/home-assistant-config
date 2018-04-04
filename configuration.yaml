@@ -119,3 +119,6 @@ media_player:
       strm-box: Alexa
       network: Network
       bluetooth: Bluetooth
+
+emulated_hue:
+  expose_by_default: false
