@@ -1,0 +1,8 @@
+name: Lichter
+entities:
+  - light.schreibtischlampe
+  - light.wand_links
+  - light.wand_rechts
+  - light.bett_oben
+  - light.bett_mitte
+  - light.bett_unten
