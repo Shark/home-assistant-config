@@ -1,6 +1,7 @@
 view: yes
 entities:
   - group.lights
+  - group.scenes
   - group.media
   - group.nas
   - group.weather

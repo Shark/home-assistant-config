@@ -1,0 +1,26 @@
+name: Reading
+entities:
+  light.schreibtischlampe:
+    state: on
+    brightness: 35
+    color_temp: 330
+  light.wand_links:
+    state: on
+    brightness: 35
+    color_temp: 330
+  light.wand_rechts:
+    state: on
+    brightness: 35
+    color_temp: 330
+  light.bett_unten:
+    state: on
+    brightness: 120
+    color_temp: 410
+  light.bett_mitte:
+    state: on
+    brightness: 70
+    color_temp: 410
+  light.bett_oben:
+    state: on
+    brightness: 70
+    color_temp: 410

@@ -54,6 +54,7 @@ group: !include_dir_named conf.d/group/
 zone: !include_dir_list conf.d/zone/
 automation old: !include_dir_merge_list conf.d/automation/
 automation: !include automations.yaml
+scene: !include_dir_merge_list conf.d/scene/
 
 device_tracker:
   platform: owntracks
