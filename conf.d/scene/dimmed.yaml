@@ -1,24 +1,22 @@
 name: Dimmed
 entities:
   light.schreibtischlampe:
+    state: off
+  light.wand_links:
     state: on
     brightness: 10
     color_temp: 454
-  light.wand_links:
-    state: on
-    brightness: 15
-    color_temp: 454
   light.wand_rechts:
     state: on
-    brightness: 15
+    brightness: 10
     color_temp: 454
   light.bett_unten:
     state: off
   light.bett_mitte:
     state: on
-    brightness: 15
+    brightness: 5
     color_temp: 454
   light.bett_oben:
     state: on
-    brightness: 15
+    brightness: 5
     color_temp: 454
