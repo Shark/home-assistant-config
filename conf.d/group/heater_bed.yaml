@@ -1,7 +1,0 @@
-name: Heater Bed
-entities:
-  - sensor.heater_bed_actual
-  - sensor.heater_bed_mode
-  - sensor.heater_bed_set
-  - sensor.heater_bed_valve
-  - sensor.heater_bed_battery

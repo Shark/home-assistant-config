@@ -1,8 +1,0 @@
-name: Switches
-view: yes
-icon: 'mdi:toggle-switch-off'
-entities:
-  - binary_sensor.dash_button_coming_home
-  - binary_sensor.dash_button_leaving_home
-  - binary_sensor.dash_button_gn8
-  - binary_sensor.dash_button_schreibtisch

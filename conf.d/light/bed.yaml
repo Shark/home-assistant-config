@@ -1,6 +1,0 @@
-- platform: mqtt_json
-  name: Bed
-  state_topic: 'things/bed/setRGB/res'
-  command_topic: 'things/bed/setRGB/req'
-  brightness: true
-  rgb: true

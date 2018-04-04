@@ -1,7 +1,0 @@
-- platform: mqtt
-  name: "Ceiling East"
-  command_topic: "things/ceilingEast/setPower/req"
-  payload_on: "{\"setPower\": true}"
-  payload_off: "{\"setPower\": false}"
-  state_topic: "things/ceilingEast/setPower/res"
-  value_template: "{% if value_json.setPower %}{\"setPower\": true}{% else %}{\"setPower\": false}{% endif %}"

@@ -1,4 +1,0 @@
-name: Heaters
-entities:
-  - input_select.heaters_mode
-  - input_number.heaters_temp

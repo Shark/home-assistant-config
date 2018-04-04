@@ -2,13 +2,12 @@
 set -euo pipefail
 
 main() {
+  docker pull homeassistant/home-assistant:"$(cat .HA_VERSION)"
   exec docker run -it --rm \
                   -v "$(pwd)":/config \
                   -e HASS_NAME=empty \
                   -e HASS_LATITUDE=0 \
                   -e HASS_LONGITUDE=0 \
-                  -e HASS_WORK_LATITUDE=0 \
-                  -e HASS_WORK_LONGITUDE=0 \
                   -e HASS_ELEVATION=0 \
                   -e HASS_HTTP_API_PASSWORD=empty \
                   -e HASS_DB_URL=empty \
@@ -20,7 +19,7 @@ main() {
                   -e HASS_TRADFRI_HOST=empty \
                   -e HASS_WEBOSTV_HOST=empty \
                   -e HASS_ONKYO_HOST=empty \
-                  homeassistant/home-assistant \
+                  homeassistant/home-assistant:"$(cat .HA_VERSION)" \
                   python -m homeassistant \
                          --config /config \
                          --script check_config \

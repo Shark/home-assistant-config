@@ -1,5 +1,0 @@
-name: Work
-latitude: !env_var HASS_WORK_LATITUDE
-longitude: !env_var HASS_WORK_LONGITUDE
-radius: 100
-icon: mdi:domain

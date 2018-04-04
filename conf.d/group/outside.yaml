@@ -1,6 +1,0 @@
-name: Outside
-view: yes
-icon: 'mdi:weather-sunny'
-entities:
-  - group.weather
-  #- group.cam

@@ -1,6 +1,0 @@
-name: Fan
-entities:
-  - fan.fan
-  - input_number.fan_speed
-  - sensor.fan_level
-  - sensor.fan

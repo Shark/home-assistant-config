@@ -1,6 +1,0 @@
-- platform: mqtt
-  name: Bathroom Motion
-  state_topic: "things/bad0/getMotion/res"
-  payload_on: '{"getMotion":true}'
-  payload_off: '{"getMotion":false}'
-  device_class: motion

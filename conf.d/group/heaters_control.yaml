@@ -1,4 +1,0 @@
-name: Control
-entities:
-  - sensor.heaters_diff
-  - sensor.heaters_valve_max

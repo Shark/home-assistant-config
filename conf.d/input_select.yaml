@@ -1,6 +1,0 @@
-heaters_mode:
-  name: Heaters Mode
-  options:
-    - auto
-    - manual
-    - boost

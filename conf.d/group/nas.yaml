@@ -1,2 +1,2 @@
 name: NAS
-entities: sensor.cpu_use, switch.nas_services, sensor.nas_services, script.quick_scan
+entities: sensor.cpu_use

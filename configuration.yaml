@@ -41,15 +41,6 @@ recorder:
   purge_interval: 2
   purge_keep_days: 60
 
-#influxdb:
-#  host: influxdb
-#  username: home_assistant
-#  password: home_assistant
-#  database: home_assistant
-#  whitelist:
-#    - sensor.nightstand
-#    - sensor.kodroid
-
 # View all events in a logbook
 logbook:
 
@@ -57,24 +48,12 @@ logbook:
 sun:
 
 alexa:
-intent_script: !include conf.d/alexa/intents.yaml
 mqtt: !include conf.d/mqtt.yaml
-switch: !include_dir_merge_list conf.d/switch/
 sensor: !include_dir_merge_list conf.d/sensor/
-binary_sensor: !include_dir_merge_list conf.d/binary_sensor/
 group: !include_dir_named conf.d/group/
 zone: !include_dir_list conf.d/zone/
 automation old: !include_dir_merge_list conf.d/automation/
 automation: !include automations.yaml
-light: !include_dir_merge_list conf.d/light/
-scene: !include_dir_merge_list conf.d/scene/
-input_boolean: !include conf.d/input_boolean.yaml
-input_number: !include conf.d/input_number.yaml
-input_select: !include conf.d/input_select.yaml
-script: !include scripts.yaml
-fan: !include conf.d/fan.yaml
-timer: !include conf.d/timer.yaml
-#camera: !include conf.d/camera.yaml
 
 device_tracker:
   platform: owntracks
@@ -88,11 +67,6 @@ notify:
 
 ifttt:
   key: !env_var HASS_IFTTT_KEY
-
-#homematic:
-#  remote_ip: 172.16.0.59
-#  username: guest
-#  password: guest
 
 tradfri:
   host: !env_var HASS_TRADFRI_HOST
@@ -119,6 +93,3 @@ media_player:
       strm-box: Alexa
       network: Network
       bluetooth: Bluetooth
-
-emulated_hue:
-  expose_by_default: false

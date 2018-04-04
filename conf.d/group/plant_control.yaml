@@ -1,5 +1,0 @@
-name: Plant Control
-entities:
-  - script.plant_pump_1
-  - script.plant_pump_10
-  - script.plant_reset

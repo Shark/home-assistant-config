@@ -1,8 +1,0 @@
-- name: Lights Out
-  entities:
-    group.all_lights:
-      state: off
-    switch.nightstand:
-      state: off
-    switch.kodi:
-      state: off

@@ -1,6 +1,0 @@
-name: Nightstand
-entities:
-  - switch.nightstand
-  - sensor.nightstand
-  - switch.bed
-  - light.bed

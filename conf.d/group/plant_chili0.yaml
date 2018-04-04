@@ -1,5 +1,0 @@
-name: Chili 0
-entities:
-  - binary_sensor.chili_0_pump_state
-  - sensor.chili_0_water_level
-  - sensor.chili_0_moisture

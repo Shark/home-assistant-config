@@ -1,5 +1,0 @@
-name: Draco L
-entities:
-  - binary_sensor.draco_l_pump_state
-  - sensor.draco_l_water_level
-  - sensor.draco_l_moisture

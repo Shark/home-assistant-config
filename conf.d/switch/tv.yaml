@@ -1,5 +1,0 @@
-- platform: mqtt
-  name: "TV"
-  command_topic: "things/tv/setPower/req"
-  payload_on: "{\"setPower\":true}"
-  payload_off: "{\"setPower\":false}"

@@ -1,5 +1,0 @@
-name: Scripts
-entities:
-  - script.turn_on_lights
-  - script.coming_home
-  - script.leaving_home

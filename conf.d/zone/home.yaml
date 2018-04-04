@@ -1,5 +1,5 @@
 name: Home
 latitude: !env_var HASS_LATITUDE
 longitude: !env_var HASS_LONGITUDE
-radius: 10
+radius: 50
 icon: mdi:home

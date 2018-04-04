@@ -1,15 +1,5 @@
 view: yes
 entities:
-  - group.heaters_default
-  - group.desk
-  - group.nightstand
-  - group.ceiling
-  - group.bathroom
-  - group.presence
-  - group.scenes
-  - group.fan
   - group.media
-  - group.kitchen
-  - group.tv
-  - media_player.tv
-  - media_player.receiver
+  - group.nas
+  - group.weather
