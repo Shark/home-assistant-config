@@ -1,24 +1,24 @@
-name: On
+name: Lights
 entities:
   light.schreibtischlampe:
     state: on
-    brightness: 254
+    brightness: 200
     color_temp: 300
   light.wand_links:
     state: on
-    brightness: 254
+    brightness: 200
     color_temp: 320
   light.wand_rechts:
     state: on
-    brightness: 254
+    brightness: 200
     color_temp: 320
   light.bett_unten:
     state: off
   light.bett_mitte:
     state: on
-    brightness: 254
+    brightness: 200
     color_temp: 320
   light.bett_oben:
     state: on
-    brightness: 254
+    brightness: 200
     color_temp: 320

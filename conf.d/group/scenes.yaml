@@ -1,6 +1,6 @@
 name: Szenen
 entities:
-  - scene.on
+  - scene.lights
   - scene.studying
   - scene.reading
   - scene.dimmed
