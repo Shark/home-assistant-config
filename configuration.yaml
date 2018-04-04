@@ -47,7 +47,7 @@ logbook:
 # Track the sun
 sun:
 
-alexa:
+cloud:
 mqtt: !include conf.d/mqtt.yaml
 sensor: !include_dir_merge_list conf.d/sensor/
 group: !include_dir_named conf.d/group/
