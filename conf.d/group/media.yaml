@@ -1,7 +1,0 @@
-name: Media
-entities:
-  - switch.tv
-  - switch.media_power
-  - switch.kodi
-  - switch.nas_services
-  - sensor.nas_services

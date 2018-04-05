@@ -19,6 +19,7 @@ main() {
                   -e HASS_TRADFRI_HOST=empty \
                   -e HASS_WEBOSTV_HOST=empty \
                   -e HASS_ONKYO_HOST=empty \
+                  -e HASS_KODI_HOST=empty \
                   homeassistant/home-assistant:"$(cat .HA_VERSION)" \
                   python -m homeassistant \
                          --config /config \

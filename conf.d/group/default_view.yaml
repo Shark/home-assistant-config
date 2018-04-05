@@ -2,6 +2,7 @@ view: yes
 entities:
   - group.lights
   - group.scenes
-  - group.media
-  - group.nas
   - group.weather
+  - media_player.receiver
+  - media_player.tv
+  - media_player.kodi

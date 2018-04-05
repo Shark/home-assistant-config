@@ -94,3 +94,5 @@ media_player:
       strm-box: Alexa
       network: Network
       bluetooth: Bluetooth
+  - platform: kodi
+    host: !env_var HASS_KODI_HOST
